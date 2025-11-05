@@ -1,7 +1,11 @@
 ﻿#include "app.h"
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <time.h>
+
+#ifdef _MSC_VER
+  #include <float.h>
+  #define isnan_compat(x) _isnan(x)
+#else
+  #define isnan_compat(x) isnan(x)
+#endif
 
 int main() {
     srand(time(NULL));
@@ -52,7 +56,7 @@ int main() {
 
         double probability = success_count * 100.0 / max_count;
 
-        if (!isnanf(result) && fabs(result - probability) <= tol) {
+        if (!isnan_compat(result) && fabs(result - probability) <= tol) {
             break;
         }
 
