@@ -2,3 +2,5 @@
 add_subdirectory("ex02_2")
 add_subdirectory("ex02_3")
 add_subdirectory("sequence")
+add_subdirectory("tabulate_1")
+add_subdirectory("tabulate_2")
