@@ -37,7 +37,7 @@
 
 #define RESULT(x, S) (S)
 
-#elifdef LAB02_1_VAR_25
+#else ifdef LAB02_1_VAR_25
 
 #define COUNT 7
 #define START_FROM 0
