@@ -1,3 +1,4 @@
+#include "app.h"
 #include "compute.h"
 #include "operations.h"
 #include <math.h>
@@ -44,7 +45,7 @@ static double compute_delegate_1(double* a, double* b, char op)
         result = op_pow(*a, *b);
         break;
     default:
-        printf("Unsupported operations %.3f%c%.3f\n", a, op, b);
+        printf("Unsupported operations %.3f%c%.3f\n", *a, op, *b);
     }
 
     return result;
@@ -58,7 +59,7 @@ static double compute_delegate_2(double* a, double* b, char op)
 
     if (id < 0)
     {
-        printf("Unsupported operations %.3f%c%.3f\n", a, op, b);
+        printf("Unsupported operations %.3f%c%.3f\n", *a, op, *b);
     }
     else {
         result = supported_funcs[id](*a, *b);

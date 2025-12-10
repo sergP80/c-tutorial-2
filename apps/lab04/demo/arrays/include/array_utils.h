@@ -1,5 +1,7 @@
 ﻿#pragma once
 
+#include <stdio.h>
+
 void print_array_int(int a[], int sz);
 
 void search_min_max_int(int a[], int sz, int*, int*);

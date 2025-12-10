@@ -58,7 +58,7 @@ int main()
         char str[] = { 'H', 'e', 'l', 'l', 'o', ',', ' ', 'w', 'o', 'r', 'l', 'd', '!'};
         int arr2[] = { -1, 3, 5, 2, 7, 4, -5, 22, 13, 11, 17, 15, -4, 12 };
 
-        printf("sizeof(str)=%d, sizeof(arr2)=%d\n", sizeof(str), sizeof(arr2));
+        printf("sizeof(str)=%lu, sizeof(arr2)=%lu\n", sizeof(str), sizeof(arr2));
 
         int sz = sizeof(arr2) / sizeof(arr2[0]);
 
